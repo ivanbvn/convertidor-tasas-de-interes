@@ -116,8 +116,24 @@ function App() {
           </Flex>
         </Flex>
       </Flex>
-      <Flex justify="center">
-        <Contact />
+      <Flex direction="column" align="center">
+        <Flex align="center" direction="column" w="250px" gap="15px">
+          <Contact />
+          <Flex>
+            <Button
+              as="a"
+              href="https://github.com/ivanbvn/convertidor-tasas-de-interes"
+              w="130px"
+              bg="white"
+              target="_blank"
+              _hover={{
+                bg: "blue.200",
+              }}
+            >
+              Repositorio
+            </Button>
+          </Flex>
+        </Flex>
       </Flex>
     </Flex>
   );
