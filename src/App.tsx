@@ -33,7 +33,7 @@ function App() {
         <Flex justify="center">
           <Flex
             direction="column"
-            w="350px"
+            w="380px"
             maxH="230px"
             justify="center"
             p="10px"
@@ -57,7 +57,7 @@ function App() {
                     <Flex gap="5px">
                       <Select
                         size="md"
-                        w="105px"
+                        w="120px"
                         onChange={handleTasaSelected}
                         name="recibida"
                         bg="gray.200"
@@ -91,7 +91,7 @@ function App() {
                     <Flex gap="5px">
                       <Select
                         size="md"
-                        w="105px"
+                        w="120px"
                         onChange={handleTasaSelected}
                         name="recibida"
                         bg="gray.200"
@@ -123,7 +123,7 @@ function App() {
                 <Flex gap="5px">
                   <Select
                     size="md"
-                    w="105px"
+                    w="120px"
                     onChange={handleTasaSelected}
                     name="a_convertir"
                     bg="gray.200"
