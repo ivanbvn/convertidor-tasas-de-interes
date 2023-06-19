@@ -1,8 +1,22 @@
 export interface ValoresTasaType {
-  [key: string]: number
+  [key: string]: number;
 }
 
-export interface tasaTypeTypes {
+export interface TasaTypeTypes {
   recibida: string;
   a_convertir: string;
+}
+
+export interface TasasInfoType {
+  [key: string]: {
+    name: string;
+    info: string;
+  };
+}
+
+export interface ValoresCapitalizacionesTypes {
+  [key: string]: {
+    n_capitalizaciones: number;
+    tasa: string;
+  };
 }

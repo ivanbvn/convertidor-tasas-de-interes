@@ -1,10 +1,11 @@
-import React, { useState } from "react"
-import { convertTasa, tasaTypeInitialState, tasaTypeTypes } from "../helpers";
+import React, { useState } from "react";
+import { convertTasa, tasaTypeInitialState, TasaTypeTypes } from "../helpers";
 
-export const useForm = () => {
-  const [tasaType, setTasaType] = useState<tasaTypeTypes>(tasaTypeInitialState);
+export const useTasas = () => {
+  const [tasaType, setTasaType] = useState<TasaTypeTypes>(tasaTypeInitialState);
   const [tasa, setTasa] = useState<string>("");
   const [tasaConvertida, setTasaConvertida] = useState<number>(0);
+  const [capitalizacion, setCapitalizacion] = useState<string>("");
 
   const handleTasaSelected = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setTasaType({
@@ -21,7 +22,8 @@ export const useForm = () => {
         convertTasa(
           Number(tasa),
           tasaType.recibida,
-          tasaType.a_convertir
+          tasaType.a_convertir,
+          capitalizacion
         ).toFixed(2)
       )
     );
@@ -32,16 +34,23 @@ export const useForm = () => {
     setTasa("");
     setTasaType(tasaTypeInitialState);
   };
+  const handleCapitalizationSelected = (
+    event: React.ChangeEvent<HTMLSelectElement>
+  ) => {
+    setCapitalizacion(event.target.value);
+  };
 
   return {
     // Variables
     tasaType,
     tasa,
     tasaConvertida,
+    capitalizacion,
     // Metodos
     setTasa,
     handleCalculateButton,
     handleCleanButton,
-    handleTasaSelected
-  }
-}
+    handleTasaSelected,
+    handleCapitalizationSelected,
+  };
+};
