@@ -20,3 +20,8 @@ export interface ValoresCapitalizacionesTypes {
     tasa: string;
   };
 }
+
+export interface questionsAndAnswersType {
+  question: string;
+  answer: string;
+}

@@ -1,5 +1,10 @@
 import React, { useState } from "react";
-import { convertTasa, tasaTypeInitialState, TasaTypeTypes } from "../helpers";
+import {
+  convertTasa,
+  resetSelect,
+  tasaTypeInitialState,
+  TasaTypeTypes,
+} from "../helpers";
 
 export const useTasas = () => {
   const [tasaType, setTasaType] = useState<TasaTypeTypes>(tasaTypeInitialState);
@@ -33,6 +38,8 @@ export const useTasas = () => {
     setTasaConvertida(0);
     setTasa("");
     setTasaType(tasaTypeInitialState);
+    setCapitalizacion("");
+    resetSelect();
   };
   const handleCapitalizationSelected = (
     event: React.ChangeEvent<HTMLSelectElement>

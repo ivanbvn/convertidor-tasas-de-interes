@@ -39,7 +39,7 @@ export const InfoButton = (props: Props) => {
         motionPreset="slideInBottom"
       >
         <ModalOverlay />
-        <ModalContent>
+        <ModalContent m="0 5px">
           <ModalHeader textAlign="center">{props.tasa.name}</ModalHeader>
           <ModalBody textAlign="center">{props.tasa.info}</ModalBody>
           <ModalFooter justifyContent="center">
